@@ -272,19 +272,24 @@ footer{background:#030303;border-top-color:rgba(231,205,164,.12);padding-top:34p
 .rel .cta{justify-content:center}
 @media(min-width:820px){.rel{justify-items:start;text-align:left}.rel .cta{justify-content:flex-start}.c3{max-width:300px}.stage{justify-self:center}}
 
-/* Etwas größere Schrift am Handy, Hero passt auf einen Bildschirm */
-@media(max-width:600px){
-nav b{font-size:.8rem}
-nav a{font-size:.84rem}
-.hero-kicker{font-size:.64rem;letter-spacing:.26em}
-h1{font-size:clamp(2.1rem,11vw,4.5rem)}
-.hero-rule b{font-size:.56rem}
-.tag{font-size:.92rem;margin-top:1rem}
-.sub{font-size:.74rem}
-.cta{margin-top:1.2rem}
-.btn{font-size:.8rem;padding:.8rem 1.1rem}
-.bgimg{background-position:center 30%}
+/* Mobil: Hauptbild komplett als 9:16, Schrift sauber und größer */
+.bgblur{display:none}
+@media(max-width:700px){
+.hero{min-height:0;height:min(100svh,177.78vw)}
+.bgblur{display:block;inset:0;background:url(cover.jpg) center/cover;filter:blur(16px) brightness(.55);transform:scale(1.2)}
+.bgimg{background:url(cover.jpg) center top/contain no-repeat;animation:none;transform:none}
+nav{padding:.55rem .8rem;gap:.5rem}
+nav b{font-size:.62rem;letter-spacing:.1em}
+nav div{gap:.85rem}
+nav a{font-size:.58rem;letter-spacing:.1em}
+.hero-kicker{font-size:.66rem;letter-spacing:.22em}
+h1{font-size:clamp(2.4rem,13.6vw,4.8rem)}
+.hero-rule b{font-size:.6rem;letter-spacing:.18em}
+.tag{font-size:min(.9rem,3.6vw);white-space:normal;letter-spacing:.01em;text-wrap:balance}
+.sub{font-size:.7rem}
+.btn{font-size:.72rem;letter-spacing:.1em}
 }
+@media(min-width:701px){.hero{min-height:125svh}}
 </style>
 </head>
 <body>
@@ -292,14 +297,14 @@ h1{font-size:clamp(2.1rem,11vw,4.5rem)}
 <nav id="nav"><b>MEN@ARMS</b><div><a href="#musik">Musik</a><a href="#artists">Artists</a><a href="#folgen">Folgen</a></div></nav>
 
 <header class="hero" id="top">
-  <div class="bgimg"></div><div class="rays"></div><div class="sm s1"></div><div class="sm s2"></div>
+  <div class="bgblur"></div><div class="bgimg"></div><div class="rays"></div><div class="sm s1"></div><div class="sm s2"></div>
   <canvas id="em" aria-hidden="true"></canvas><div class="grain"></div><div class="vig"></div>
   <div class="wrap hc" id="hc">
     <!-- Logo als logo.jpg und Hintergrundbild als hero.jpg neben diese Datei legen -->
     <img class="logo" src="./logo.jpg" alt="Men@Arms Logo" onerror="this.remove()">
     <div class="hero-kicker"><span></span> OrkO × Semaphor <span></span></div>
     <h1>MEN<span class="at">@</span>ARMS</h1>
-    <div class="hero-rule"><i></i><b>JUDGEMENT DAY</b><i></i></div>
+    <div class="hero-rule"><i></i><b>DEAD SIGNAL RECORDS</b><i></i></div>
     <p class="tag">Cinematic Endzeit-Rap · <span class="orko-name" style="font-size:1em">its OrkO<span class="tail">ツ</span></span> × Semaphor</p>
     <p class="sub">Jeder Track erzählt ein neues Kapitel.</p>
     <div class="cta">
