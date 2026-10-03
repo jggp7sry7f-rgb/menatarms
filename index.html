@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Men At Arms | Cinematic Endzeit-Rap</title>
-<meta name="description" content="Men At Arms. Cinematic Endzeit-Rap von OrkO und Semaphor. Jeder Track erzählt ein neues Kapitel.">
+<title>Men@Arms | Cinematic Endzeit-Rap</title>
+<meta name="description" content="Men@Arms. Cinematic Endzeit-Rap von OrkO und Semaphor. Jeder Track erzählt ein neues Kapitel.">
 <meta name="theme-color" content="#070605">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -248,20 +248,32 @@ footer{background:#030303;border-top-color:rgba(231,205,164,.12);padding-top:34p
 
 .visual-second{padding-top:20px}.visual-head{margin-bottom:30px}.visual-card{position:relative;max-width:760px;margin:0 auto;border:1px solid rgba(231,205,164,.2);border-radius:28px;overflow:hidden;background:#080706;box-shadow:0 30px 90px rgba(0,0,0,.7),0 0 0 1px rgba(255,255,255,.04);transform:translateZ(0)}.visual-card::before{content:"";position:absolute;inset:0;z-index:2;pointer-events:none;background:linear-gradient(135deg,rgba(255,255,255,.12),transparent 25%,transparent 72%,rgba(255,150,50,.08))}.visual-card img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:center;border-radius:28px}.visual-gloss{position:absolute;inset:0;pointer-events:none;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.16) 48%,transparent 62%);mix-blend-mode:screen;opacity:.45}
 @media(max-width:700px){.visual-second{padding-top:8px}.visual-head{margin-bottom:22px}.visual-card{border-radius:20px}.visual-card img{border-radius:20px;aspect-ratio:auto;object-fit:contain;background:#050505}.visual-gloss{opacity:.25}}
+
+/* Buttons und Menü-Links in der Schrift des Titels */
+.btn,nav a{font-family:var(--d);font-weight:700}
+
+/* Hauptlogo im Hintergrundbild deutlich sichtbar, Text unten */
+.bgimg{opacity:1;filter:none;background-position:center top;-webkit-mask-image:none;mask-image:none}
+.hero:after{background:linear-gradient(180deg,rgba(5,5,5,.3) 0%,transparent 20%,transparent 46%,rgba(5,5,5,.88) 76%,#050505 100%)}
+.vig{opacity:.4}
+.sm{display:none}
+.hero{align-items:flex-end}
+.hc{padding-top:0;padding-bottom:52px}
+@media(min-width:900px){.bgimg{background-position:center 24%}}
 </style>
 </head>
 <body>
 <div id="bar"></div>
-<nav id="nav"><b>MEN AT ARMS</b><div><a href="#musik">Musik</a><a href="#artists">Artists</a><a href="#folgen">Folgen</a></div></nav>
+<nav id="nav"><b>MEN@ARMS</b><div><a href="#musik">Musik</a><a href="#artists">Artists</a><a href="#folgen">Folgen</a></div></nav>
 
 <header class="hero" id="top">
   <div class="bgimg"></div><div class="rays"></div><div class="sm s1"></div><div class="sm s2"></div>
   <canvas id="em" aria-hidden="true"></canvas><div class="grain"></div><div class="vig"></div>
   <div class="wrap hc" id="hc">
     <!-- Logo als logo.jpg und Hintergrundbild als hero.jpg neben diese Datei legen -->
-    <img class="logo" src="./logo.jpg" alt="Men At Arms Logo" onerror="this.remove()">
-    <div class="hero-kicker"><span></span> MEN AT ARMS <span></span></div>
-    <h1>MEN <span class="at">AT</span> ARMS</h1>
+    <img class="logo" src="./logo.jpg" alt="Men@Arms Logo" onerror="this.remove()">
+    <div class="hero-kicker"><span></span> MEN@ARMS <span></span></div>
+    <h1>MEN<span class="at">@</span>ARMS</h1>
     <div class="hero-rule"><i></i><b>JUDGEMENT DAY</b><i></i></div>
     <p class="tag">Cinematic Endzeit-Rap · <span class="orko-name" style="font-size:1em">its OrkO<span class="tail">ツ</span></span> × Semaphor</p>
     <p class="sub">Jeder Track erzählt ein neues Kapitel.</p>
@@ -280,11 +292,11 @@ footer{background:#030303;border-top-color:rgba(231,205,164,.12);padding-top:34p
 <main>
 <section id="release"><div class="wrap rv">
   <div class="rel">
-    <div class="stage"><div class="c3"><img src="./cover2.jpg" alt="Men At Arms – Judgement Day" onerror="this.closest('.stage').style.display='none'"><i></i></div></div>
+    <div class="stage"><div class="c3"><img src="./cover2.jpg" alt="Men@Arms – Judgement Day" onerror="this.closest('.stage').style.display='none'"><i></i></div></div>
     <div>
       <div class="section-kicker">EP · JUDGEMENT DAY</div>
       <h2>Judgement Day</h2>
-      <p class="lead">Die erste EP von Men At Arms. Zwei Masken, ein Sound, kein Weichzeichner.</p>
+      <p class="lead">Die erste EP von Men@Arms. Zwei Masken, ein Sound, kein Weichzeichner.</p>
       <div class="cta">
         <a class="btn main" href="#musik">Jetzt hören</a>
         <a class="btn" href="https://www.tiktok.com/@menatarms2" target="_blank" rel="noopener">Auf TikTok</a>
@@ -308,22 +320,22 @@ footer{background:#030303;border-top-color:rgba(231,205,164,.12);padding-top:34p
 </div></section>
 
 <section id="artists"><div class="wrap rv">
-  <h2>Die zwei hinter Men At Arms</h2>
+  <h2>Die zwei hinter Men@Arms</h2>
   <div class="duo">
     <div class="panel sp">
       <h3 class="orko-name">its OrkO<span class="tail">ツ</span></h3>
       <p>Dark Street Rap auf Deutsch und Englisch.</p>
       <div class="cta">
-        <a class="btn main" href="https://www.tiktok.com/@itsorkoai" target="_blank" rel="noopener">TikTok</a>
-        <a class="btn" href="#" target="_blank" rel="noopener">Spotify</a>
+        <a class="btn main" href="https://www.tiktok.com/@itsorkoai" target="_blank" rel="noopener noreferrer">TikTok</a>
+        <a class="btn" href="https://open.spotify.com/artist/67NaIehnXVdECOtO9YL6Dm" target="_blank" rel="noopener noreferrer">Spotify</a>
       </div>
     </div>
     <div class="panel sp g">
-      <h3><a href="https://www.tiktok.com/@semaphor777" target="_blank" rel="noopener">Semaphor</a></h3>
-      <p>Die zweite Stimme von Men At Arms.</p>
+      <h3><a href="https://www.tiktok.com/@semaphor777" target="_blank" rel="noopener noreferrer">Semaphor</a></h3>
+      <p>Die zweite Stimme von Men@Arms.</p>
       <div class="cta">
-        <a class="btn main" href="https://www.tiktok.com/@semaphor777" target="_blank" rel="noopener">TikTok</a>
-        <a class="btn" href="#" target="_blank" rel="noopener">Spotify</a>
+        <a class="btn main" href="https://www.tiktok.com/@semaphor777" target="_blank" rel="noopener noreferrer">TikTok</a>
+        <a class="btn" href="https://open.spotify.com/artist/5jIZ7bTauif3zJI45asTG4" target="_blank" rel="noopener noreferrer">Spotify</a>
       </div>
     </div>
   </div>
@@ -340,7 +352,7 @@ footer{background:#030303;border-top-color:rgba(231,205,164,.12);padding-top:34p
 </div></section>
 </main>
 
-<footer><div class="footer-top"><span>© 2026 Men At Arms</span><span>its OrkOツ &amp; Semaphor</span></div><div class="label"><span class="k">Plattenlabel</span><span class="v">Dead Signal Records</span></div></footer>
+<footer><div class="footer-top"><span>© 2026 Men@Arms</span><span>its OrkOツ &amp; Semaphor</span></div><div class="label"><span class="k">Plattenlabel</span><span class="v">Dead Signal Records</span></div></footer>
 
 <script>
 const $=s=>document.querySelector(s),bar=$('#bar'),nav=$('#nav'),hc=$('#hc'),H=()=>innerHeight;
