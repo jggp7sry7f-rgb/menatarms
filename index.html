@@ -260,6 +260,31 @@ footer{background:#030303;border-top-color:rgba(231,205,164,.12);padding-top:34p
 .hero{align-items:flex-end}
 .hc{padding-top:0;padding-bottom:52px}
 @media(min-width:900px){.bgimg{background-position:center 24%}}
+
+/* Hauptcover größer, Text unter den Köpfen; EP-Cover klein und quadratisch */
+.hero{min-height:100svh}
+.hc{padding-bottom:26px}
+#hc{opacity:1!important;transform:none!important}
+.stage{padding:0}
+.c3{max-width:230px}
+.c3 img{aspect-ratio:1/1;object-fit:cover}
+.rel{justify-items:center;text-align:center}
+.rel .cta{justify-content:center}
+@media(min-width:820px){.rel{justify-items:start;text-align:left}.rel .cta{justify-content:flex-start}.c3{max-width:300px}.stage{justify-self:center}}
+
+/* Etwas größere Schrift am Handy, Hero passt auf einen Bildschirm */
+@media(max-width:600px){
+nav b{font-size:.8rem}
+nav a{font-size:.84rem}
+.hero-kicker{font-size:.64rem;letter-spacing:.26em}
+h1{font-size:clamp(2.1rem,11vw,4.5rem)}
+.hero-rule b{font-size:.56rem}
+.tag{font-size:.92rem;margin-top:1rem}
+.sub{font-size:.74rem}
+.cta{margin-top:1.2rem}
+.btn{font-size:.8rem;padding:.8rem 1.1rem}
+.bgimg{background-position:center 30%}
+}
 </style>
 </head>
 <body>
@@ -272,7 +297,7 @@ footer{background:#030303;border-top-color:rgba(231,205,164,.12);padding-top:34p
   <div class="wrap hc" id="hc">
     <!-- Logo als logo.jpg und Hintergrundbild als hero.jpg neben diese Datei legen -->
     <img class="logo" src="./logo.jpg" alt="Men@Arms Logo" onerror="this.remove()">
-    <div class="hero-kicker"><span></span> MEN@ARMS <span></span></div>
+    <div class="hero-kicker"><span></span> OrkO × Semaphor <span></span></div>
     <h1>MEN<span class="at">@</span>ARMS</h1>
     <div class="hero-rule"><i></i><b>JUDGEMENT DAY</b><i></i></div>
     <p class="tag">Cinematic Endzeit-Rap · <span class="orko-name" style="font-size:1em">its OrkO<span class="tail">ツ</span></span> × Semaphor</p>
