@@ -26,7 +26,7 @@ a{color:inherit;text-decoration:none}
 nav{position:fixed;top:calc(env(safe-area-inset-top) + 12px);left:50%;transform:translateX(-50%);z-index:50;width:min(560px,calc(100% - 24px));
 display:flex;justify-content:space-between;align-items:center;padding:.55rem 1.2rem;border-radius:999px;border:1px solid var(--line);
 background:rgba(14,11,8,.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 10px 30px rgba(0,0,0,.4)}
-nav b{font:900 .98rem var(--d);letter-spacing:.1em}
+nav b{font:900 .98rem var(--d);letter-spacing:.1em;white-space:nowrap}@media(max-width:520px){nav b{font-size:.78rem;letter-spacing:.05em}nav div{gap:.8rem}nav a{font-size:.8rem}}
 nav div{display:flex;gap:1.2rem}
 nav a{font-size:.88rem;font-weight:500;color:var(--mute);transition:color .2s}
 nav a:hover{color:var(--e)}
@@ -34,7 +34,7 @@ nav a:hover{color:var(--e)}
 .hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;isolation:isolate;
 background:radial-gradient(ellipse 85% 55% at 50% 100%,rgba(255,130,40,.45),rgba(130,40,15,.22) 48%,transparent 78%),#070605}
 .hero>*{position:absolute}
-.bgimg{inset:0;background:url(cover.jpg) center 30%/cover;opacity:.42;animation:kb 32s ease-in-out infinite alternate;
+.bgimg{inset:0;background:url(cover.jpg) center 30%/cover;opacity:.3;animation:kb 32s ease-in-out infinite alternate;
 -webkit-mask-image:linear-gradient(#000 40%,transparent);mask-image:linear-gradient(#000 40%,transparent)}
 .rays{top:100%;left:50%;width:170vmax;height:170vmax;margin:-85vmax 0 0 -85vmax;animation:spin 120s linear infinite;
 background:conic-gradient(transparent 0 7%,rgba(255,170,70,.2) 9%,transparent 12% 27%,rgba(255,120,40,.16) 29%,transparent 33% 51%,rgba(255,180,80,.18) 53%,transparent 57% 77%,rgba(255,120,40,.14) 79%,transparent 83%);
@@ -48,10 +48,10 @@ background:conic-gradient(transparent 0 7%,rgba(255,170,70,.2) 9%,transparent 12
 @keyframes dr{to{transform:translate3d(9vmax,-5vmax,0) scale(1.18)}}
 @keyframes kb{to{transform:scale(1.09)}}
 
-.hc{position:relative!important;width:100%;padding:110px 0 80px;will-change:transform,opacity}
+.hc{position:relative!important;width:100%;padding:110px 24px 80px;will-change:transform,opacity}
 .logo{width:92px;height:92px;border-radius:50%;object-fit:cover;display:block;margin-bottom:1.8rem;border:1px solid rgba(255,200,120,.4);box-shadow:0 0 50px rgba(255,140,40,.3)}
 h1{font:900 clamp(2.8rem,12vw,6.6rem)/1.05 var(--d);letter-spacing:.04em;filter:drop-shadow(0 6px 34px rgba(255,120,40,.35));display:inline-block;color:var(--e);
-background:linear-gradient(105deg,transparent 42%,rgba(255,255,255,.95) 50%,transparent 58%) 160% 0/250% 100% no-repeat,linear-gradient(180deg,#f6f1e7 0%,#cfc8ba 36%,#85796a 62%,#3a342c 100%);
+background:linear-gradient(105deg,transparent 42%,rgba(255,255,255,.95) 50%,transparent 58%) 160% 0/250% 100% no-repeat,linear-gradient(180deg,#f6f1e7 0%,#cfc8ba 36%,#ada190 62%,#7a6f60 100%);
 -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
 animation:in 1.9s cubic-bezier(.2,.8,.2,1) both,sh 1.6s ease-in-out 1.5s 1 forwards}
 @keyframes in{from{opacity:0;letter-spacing:.14em;transform:scale(1.05)}}
