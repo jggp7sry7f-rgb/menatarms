@@ -313,6 +313,18 @@ h1{filter:drop-shadow(0 1px 0 #5f4e39) drop-shadow(0 2px 0 #4d3f2e) drop-shadow(
 .panel{text-align:center}
 .panel h3,.panel p{margin-left:auto;margin-right:auto}
 .panel .cta{justify-content:center}
+
+/* TikTok-Videofenster */
+.vp{margin:2.6rem auto 0;width:min(300px,78vw)}
+.vp-frame{padding:6px;border-radius:26px;background:linear-gradient(145deg,rgba(236,208,160,.55),rgba(236,208,160,.08) 40%,rgba(236,208,160,.35));box-shadow:0 22px 50px rgba(0,0,0,.6),0 0 40px rgba(255,150,50,.12)}
+.vp-stage{position:relative;aspect-ratio:9/16;border-radius:20px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:linear-gradient(rgba(5,5,5,.4),rgba(5,5,5,.78)),url(cover.jpg) center/cover}
+.vp-stage iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:#000}
+.vp-ctl{display:flex;align-items:center;justify-content:center;gap:1rem;margin-top:1rem}
+.vp-ctl>button{width:38px;height:38px;border-radius:50%;border:1px solid rgba(236,208,160,.35);background:rgba(255,255,255,.04);color:#ecdcc0;font-size:1.5rem;line-height:1;cursor:pointer;padding:0 0 3px}
+.vp-dots{display:flex;gap:.55rem}
+.vp-dot{width:9px;height:9px;padding:0;border-radius:50%;border:1px solid rgba(236,208,160,.6);background:transparent;cursor:pointer}
+.vp-dot.on{background:#e8c789}
+.vp-note{margin-top:.8rem;font-size:.72rem;opacity:.55}
 </style>
 </head>
 <body>
@@ -401,6 +413,17 @@ h1{filter:drop-shadow(0 1px 0 #5f4e39) drop-shadow(0 2px 0 #4d3f2e) drop-shadow(
     <a class="btn main" href="https://www.tiktok.com/@menatarms2" target="_blank" rel="noopener">TikTok @menatarms2</a>
     <a class="btn" href="#" target="_blank" rel="noopener">YouTube Kanal</a>
   </div>
+  <div class="vp" id="vp">
+    <div class="vp-frame"><div class="vp-stage" id="vpStage">
+      <button class="btn main vp-start" id="vpStart" type="button">Videos abspielen</button>
+    </div></div>
+    <div class="vp-ctl">
+      <button type="button" id="vpPrev" aria-label="Voriges Video">&#8249;</button>
+      <div class="vp-dots" id="vpDots"></div>
+      <button type="button" id="vpNext" aria-label="Nächstes Video">&#8250;</button>
+    </div>
+    <p class="vp-note">Beim Abspielen werden Inhalte von TikTok geladen.</p>
+  </div>
 </div></section>
 </main>
 
@@ -445,6 +468,19 @@ if(matchMedia('(hover:hover) and (pointer:fine)').matches)document.querySelector
     st.addEventListener('pointerleave',()=>{c.style.transform='';c.style.setProperty('--gx','50%')})}
   else c.classList.add('idle')})();
 
+
+(()=>{const ids=['7659399877318757665','7659879007126703393','7661003514729991456','7688462221071944992'];
+const st=document.getElementById('vpStage'),dots=document.getElementById('vpDots');let i=-1,f=null;
+ids.forEach((_,n)=>{const d=document.createElement('button');d.type='button';d.className='vp-dot';d.setAttribute('aria-label','Video '+(n+1));d.onclick=()=>go(n);dots.appendChild(d)});
+function go(n){i=(n+ids.length)%ids.length;[...dots.children].forEach((d,k)=>d.classList.toggle('on',k===i));
+if(!f){f=document.createElement('iframe');f.allow='autoplay; fullscreen; encrypted-media';f.setAttribute('allowfullscreen','');f.title='TikTok Video';st.innerHTML='';st.appendChild(f)}
+f.src='https://www.tiktok.com/player/v1/'+ids[i]+'?autoplay=1&controls=1&music_info=0&description=0&rel=0'}
+document.getElementById('vpStart').onclick=()=>go(0);
+document.getElementById('vpNext').onclick=()=>go(i+1);
+document.getElementById('vpPrev').onclick=()=>go(i<0?ids.length-1:i-1);
+addEventListener('message',e=>{if(e.origin!=='https://www.tiktok.com')return;const m=e.data;
+if(m&&typeof m==='object'&&m['x-tiktok-player']===true&&m.type==='onStateChange'&&m.value===0&&f&&e.source===f.contentWindow)go(i+1)});
+})();
 </script>
 </body>
 </html>
