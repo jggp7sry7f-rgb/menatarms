@@ -275,7 +275,7 @@ footer{background:#030303;border-top-color:rgba(231,205,164,.12);padding-top:34p
 /* Mobil: Hauptbild komplett als 9:16, Schrift sauber und größer */
 .bgblur{display:none}
 @media(max-width:700px){
-.hero{min-height:0;height:calc(177.78vw + 56px)}
+.hero{min-height:0;height:calc(177.78vw + 166px)}
 .bgblur{display:block;inset:0;background:url(cover.jpg) center/cover;filter:blur(16px) brightness(.55);transform:scale(1.2)}
 .bgimg{inset:56px 0 0 0;background:url(cover.jpg) center top/100% auto no-repeat;animation:none;transform:none}
 nav{padding:.55rem .8rem;gap:.5rem}
@@ -298,15 +298,21 @@ h1{filter:drop-shadow(0 1px 0 #5f4e39) drop-shadow(0 2px 0 #4d3f2e) drop-shadow(
 /* Extras: pulsierende Augen und Lichtreflex über dem Logo (Handy) */
 .eye,.glint{display:none}
 @media(max-width:700px){
-.eye{display:block;width:13vw;height:13vw;margin:-6.5vw 0 0 -6.5vw;top:calc(56px + 80vw);border-radius:50%;mix-blend-mode:screen;pointer-events:none;animation:pulse 3.4s ease-in-out infinite}
-.eg{left:34.6%;background:radial-gradient(circle,rgba(150,255,80,.85),rgba(80,220,40,.25) 45%,transparent 70%)}
-.er{left:66.5%;background:radial-gradient(circle,rgba(255,110,70,.85),rgba(255,40,20,.3) 45%,transparent 70%);animation-delay:-1.7s}
-.glint{display:block;left:0;right:0;top:calc(56px + 24vw);height:44vw;overflow:hidden;pointer-events:none}
+.eye{display:block;width:13vw;height:13vw;margin:-6.5vw 0 0 -6.5vw;top:calc(56px + 111vw);border-radius:50%;mix-blend-mode:screen;pointer-events:none;animation:pulse 3.4s ease-in-out infinite}
+.eg{left:35.8%;background:radial-gradient(circle,rgba(150,255,80,.85),rgba(80,220,40,.25) 45%,transparent 70%)}
+.er{left:66.6%;background:radial-gradient(circle,rgba(255,110,70,.85),rgba(255,40,20,.3) 45%,transparent 70%);animation-delay:-1.7s}
+.glint{display:block;left:0;right:0;top:calc(56px + 44vw);height:32vw;overflow:hidden;pointer-events:none}
 .glint:after{content:"";position:absolute;top:-20%;bottom:-20%;left:0;width:34%;background:linear-gradient(105deg,transparent,rgba(255,255,255,.8),transparent);mix-blend-mode:overlay;transform:translateX(-130%) skewX(-18deg);animation:glint 6.5s ease-in-out 2s infinite}
 }
 @keyframes pulse{0%,100%{opacity:.2;transform:scale(.85)}50%{opacity:.95;transform:scale(1.15)}}
 @keyframes glint{0%{transform:translateX(-130%) skewX(-18deg)}22%,100%{transform:translateX(330%) skewX(-18deg)}}
 @media(prefers-reduced-motion:reduce){.eye{animation:none;opacity:.5}.glint:after{animation:none}}
+
+/* Künstler-Bereich mittig */
+#artists h2{text-align:center}
+.panel{text-align:center}
+.panel h3,.panel p{margin-left:auto;margin-right:auto}
+.panel .cta{justify-content:center}
 </style>
 </head>
 <body>
@@ -343,7 +349,7 @@ h1{filter:drop-shadow(0 1px 0 #5f4e39) drop-shadow(0 2px 0 #4d3f2e) drop-shadow(
     <div>
       <div class="section-kicker">EP · JUDGEMENT DAY</div>
       <h2>Judgement Day</h2>
-      <p class="lead">Die erste EP von Men@Arms. Zwei Masken, ein Sound, kein Weichzeichner.</p>
+      <p class="lead">Die erste EP von Men@Arms. Macht euch bereit für den Endzeit-Sound.</p>
       <div class="cta">
         <a class="btn main" href="#musik">Jetzt hören</a>
         <a class="btn" href="https://www.tiktok.com/@menatarms2" target="_blank" rel="noopener">Auf TikTok</a>
@@ -438,6 +444,7 @@ if(matchMedia('(hover:hover) and (pointer:fine)').matches)document.querySelector
       cancelAnimationFrame(r);r=requestAnimationFrame(()=>{c.style.transform='rotateY('+x*26+'deg) rotateX('+-y*22+'deg)';c.style.setProperty('--gx',(50+x*90)+'%')})});
     st.addEventListener('pointerleave',()=>{c.style.transform='';c.style.setProperty('--gx','50%')})}
   else c.classList.add('idle')})();
+
 </script>
 </body>
 </html>
